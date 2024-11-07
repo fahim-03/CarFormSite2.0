@@ -11,50 +11,51 @@
     <form id="survey-form">
       <fieldset>
         <legend>Please enter your details</legend>
-        <label id="name-label" for="name">Full Name:
-          <input id="name" type="text" name="name" required/>
+        <label id="name-label" for="name"><p id="test">Full Name:</p>
+          <input id="name" type="text" name="name" placeholder="Enter name here..." required/>
         </label>
-        <label id="email-label" for="email">Email:
-          <input id="email" type="email" name="Email" required/>
+        <label id="email-label" for="email"><p id="test">Email:</p>
+          <input id="email" type="email" name="Email" placeholder="Enter email here..." required/>
         </label>
-        <label id="number-label" for="number">Age:
-          <input id="number" type="number" name="Age" required min="16" max="120">
+        <label id="number-label" for="number"><p id="test">Age:</p>
+          <input id="number" type="number" name="Age" placeholder="Enter age here..." required min="16" max="120">
         </label>
-        <label for="city">City:
+        <label for="city"><p id="test">City:</p>
           <input id="city" type="text"/>
         </label>
       </fieldset>
       <fieldset>
         <legend>Please Enter Your Drivers Status</legend>
-        <label for="lic-car"><input class="inline" type="radio" id="lic-car" name="Status" checked> You have a Drivers License & a car</label>
-        <label for="lic"><input class="inline" type="radio" id="lic" name="Status"> You have a Drivers License & no car</label>
-        <label for="learning-car"><input class="inline" type="radio" name="Status" id="learning-car"> You are learning to drive & have a car</label>
-        <label for="learning"><input class="inline" type="radio" name="Status" id="learning"> You are learning to drive & have no car</label>
-        <label for="nolic-car"><input class="inline" type="radio" id="nolic-car" name="Status"> You have no Drivers License but have a car</label>
-        <label for="nolic"><input class="inline" type="radio" id="nolic" name="Status"> You have no Drivers License & no car</label>
-        <label for="car-pic">Please show your car off to everyone by uploading a pic: <input id="car-pic" type="file" name="car-pic"></label>
+        <div class="list">
+          <label for="lic-car"><input class="inline" type="radio" id="lic-car" name="Status" value="license-car" checked> You have a Drivers License & a car</label>
+          <label for="lic"><input class="inline" type="radio" id="lic" name="Status" value="License"> You have a Drivers License & no car</label>
+          <label for="learning-car"><input class="inline" type="radio" name="Status" id="learning-car" value="learning-car"> You are learning to drive & have a car</label>
+          <label for="learning"><input class="inline" type="radio" name="Status" id="learning" value="just-learning"> You are learning to drive & have no car</label>
+          <label for="nolic-car"><input class="inline" type="radio" id="nolic-car" name="Status" value="no-license-car"> You have no Drivers License but have a car</label>
+          <label for="nolic"><input class="inline" type="radio" id="nolic" name="Status" value="bum"> You have no Drivers License & no car</label>
+        </div>
+        <label for="car-pic"><p id="test">Please show your car off to everyone by uploading a pic: </p><input id="car-pic" type="file" name="car-pic"></label>
       </fieldset>
       <fieldset>
         <legend>This section is optional but  please fill it in</legend>
-        <p>Please tick all boxes that you desire the most in a car</p>
-        <!--TODO: Place a checkbox to choose desired car features-->
-        <label for="heat-seats"><input class="inline" type="checkbox" id="heat-seats" name="features" value="Heated seats">Heated seats</label>
-        <label for="c-control"><input class="inline" type="checkbox" id="c-control" name="features" value="Cruise control">Cruise control</label>
-        <label for="digi-dash"><input class="inline" type="checkbox" id="digi-dash" name="features" value="Digital dash">Digital dash</label>
-        <label for="auto-doors"><input class="inline" type="checkbox" id="auto-doors" name="features" value="Automatic doors">Automatic doors</label>
-        <label for="carplay"><input class="inline" type="checkbox" id="carplay" name="features" value="Integrated Carplay">Integrated Carplay(apple/android)</label>
-        <label for="parking-sensors"><input class="inline" type="checkbox" id="parking-sensors" name="features" value="Built-in parking sensors">Built in parking sensors/camera</label>
-        <label for="massage-seats"><input class="inline" type="checkbox" id="massage-seats" name="features" value="Massage seats">Massage seats</label>
-        <label for="boot-space"><input class="inline" type="checkbox" id="boot-space" name="features" value="Extra boot space">Extra boot space</label>
-        <!--TODO: Place a text area for stories we'll highlight in newsletter-->
-        <label for="story">Enter a story for a chance to be in our newsletter:
-            <textarea id="story" name="funny-story" rows="5" cols="25" placeholder="Please enter a funny story you want to share..."></textarea>
+        <p id="test">Please tick all boxes that you desire the most in a car</p>
+        <div class="list">
+          <label for="heat-seats"><input class="inline" type="checkbox" id="heat-seats" name="features" value="Heated seats">Heated seats</label>
+          <label for="c-control"><input class="inline" type="checkbox" id="c-control" name="features" value="Cruise control">Cruise control</label>
+          <label for="digi-dash"><input class="inline" type="checkbox" id="digi-dash" name="features" value="Digital dash">Digital dash</label>
+          <label for="auto-doors"><input class="inline" type="checkbox" id="auto-doors" name="features" value="Automatic doors">Automatic doors</label>
+          <label for="carplay"><input class="inline" type="checkbox" id="carplay" name="features" value="Integrated Carplay">Integrated Carplay(apple/android)</label>
+          <label for="parking-sensors"><input class="inline" type="checkbox" id="parking-sensors" name="features" value="Built-in parking sensors">Built in parking sensors/camera</label>
+          <label for="massage-seats"><input class="inline" type="checkbox" id="massage-seats" name="features" value="Massage seats">Massage seats</label>
+          <label for="boot-space"><input class="inline" type="checkbox" id="boot-space" name="features" value="Extra boot space">Extra boot space</label>
+        </div>  
+        <label for="story"><p id="test">Enter a story for a chance to be in our newsletter:</p>
+            <textarea id="story" name="funny-story" rows="10" cols="30" placeholder="Please enter a funny story you want to share..."></textarea>
         </label>
       </fieldset>
       <fieldset>
-        <!--TODO: create a dropdown so we know how you came to hear about us-->
-        <label for="referral">How did you hear about us?
-            <select id="referral" name="referral" required>
+        <label for="dropdown"><p id="test">How did you hear about us?</p>
+            <select id="dropdown" name="referral" required>
                 <option value=" ">Please select an option</option>
                 <option value="1">Google</option>
                 <option value="2">Friends/Family</option>
@@ -63,12 +64,12 @@
             </select>
         </label>
       </fieldset>
-      <!--TODO: create a mandatory terms checkbox-->
       <label for="terms">
-        <input class="inline" type="checkbox" id="terms" name="terms-&-conditions"> Before you Submit please accept our <a href="">terms & conditions</a>
+        <div class="list">
+          <input class="inline" type="checkbox" id="terms" name="terms-&-conditions" value="accept-terms"> Before you Submit please accept our <a href="">terms & conditions</a>
+        </div>
       </label>
-      <!--TODO: Add a submit button here-->
-      <input type="submit" value="Submit"/>
+      <input type="submit" id="submit" value="Submit"/>
     </form>
   </body>  
 </html>
