@@ -4,21 +4,68 @@ body{
     margin: 0;
     background-image: url("https://images.pexels.com/photos/248747/pexels-photo-248747.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" );
     background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin-bottom: 40px;
     color: #f5f6f7;
-    /*font-family: Tahoma;
-    font-size: 16px;*/
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
 }
 
 form{
-    background-color: rgba(0,0,0,80);
+    background-color: rgba(255, 255, 255, 0.11);
+    margin: 0 auto;
+    width: 75%;
+    max-width: 650px;
+    min-width: 500px;
+    padding-bottom: 2em;
+    border-radius: 1%;
 }
   
-#title{
+#title,#description{
     margin: 1em auto;
     text-align: center;
 }
-  
-#description{
-    margin: 1em auto;
-    text-align: center;
+
+fieldset {
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.334);
+    padding: 2rem 0;
+}
+
+fieldset:last-of-type{
+    border-bottom: none; 
+}
+
+legend{
+    text;
+}
+
+label {
+    display: block;
+    margin: 0 auto;
+    margin-left: 2%;
+}
+
+input,textarea,select {
+    display: block;
+    width: 90%;
+    margin-bottom: 15px;
+    min-height: 1.5em;
+    padding: 10px, auto;
+}
+
+input, textarea{
+    border-radius:%;
+}
+
+.inline{
+    display: inline;
+    width: auto;
+    min-height: 1em;
+    margin-bottom: 5px;
+}
+
+input[type="radio"]:last-of-type, input[type="checkbox"]:last-of-type{
+    margin-bottom: 10px;
 }
